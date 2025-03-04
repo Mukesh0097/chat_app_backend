@@ -13,8 +13,7 @@ const users: string[] = []
 
 const httpServer = http.createServer(app);
 
-
-app.use(cors<Request>());
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 
 app.get("/getuser", (req, res) => {
