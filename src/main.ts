@@ -23,7 +23,8 @@ app.get("/getuser", (req, res) => {
 
 const io = new Server(httpServer, {
     cors: {
-        origin: "*",
+        origin: "http://localhost:5173", // Allow frontend URL
+    methods: ["GET", "POST"]
     }
 })
 
