@@ -2,6 +2,9 @@ import express, { Request } from "express";
 import { Server } from "socket.io";
 import http from "http";
 import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 
 
@@ -64,5 +67,4 @@ io.on("connection", (socket) => {
     // ...
 });
 
-app.listen(5000, () => console.log("server is running on port 5000"));
-httpServer.listen(8000, () => console.log("server is running on port 8000"));
+httpServer.listen(process.env.PORT, () => console.log("server is running on port 8000"));
