@@ -1,13 +1,21 @@
-{   
- "compilerOptions": 
- {    
-  "module": "commonjs",   
-  "esModuleInterop": true,    
-  "target": "es6",    
-  "strict": true,    
-  "moduleResolution": "node",    
-  "sourceMap": true,    
-  "outDir": "dist"  
- },   
- "include": ["main.ts"],   
- "exclude": ["node_modules"] }
+{
+  "compilerOptions": {
+    "target": "ES6",                      // Compile to ES6 JavaScript, which is compatible with modern Node.js versions
+    "module": "CommonJS",                  // Use CommonJS module system, standard for Node.js
+    "lib": ["es6"],                        // Use ES6 features
+    "declaration": false,                  // Don't generate type declarations
+    "outDir": "./dist",                    // Output compiled JS files to the dist folder
+    "rootDir": "./src",                    // Root directory of TypeScript files
+    "esModuleInterop": true,               // Enable compatibility between ES6 modules and CommonJS
+    "skipLibCheck": true,                  // Skip checking of declaration files for performance reasons
+    "strict": true,                        // Enable all strict type-checking options (highly recommended)
+    "resolveJsonModule": true,             // Allow importing JSON files
+    "forceConsistentCasingInFileNames": true // Enforce consistent file name casing across the project
+  },
+  "include": [
+    "src/**/*.ts"                           // Include all TypeScript files from the src directory
+  ],
+  "exclude": [
+    "node_modules"                          // Exclude node_modules from compilation
+  ]
+}
