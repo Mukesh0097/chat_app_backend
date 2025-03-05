@@ -69,20 +69,15 @@
 
 // httpServer.listen(process.env.PORT, () => console.log("server is running on port 8000"));
 
+import express from 'express';
+const app = express();
+const port = process.env.PORT || 3000;
 
-  import express, { Request, Response } from 'express'
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
-  const app = express()
-  const port = process.env.PORT || 8080
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
-  app.get('/', (_req: Request, res: Response) => {
-    return res.send('Express Typescript on Vercel')
-  })
-
-  app.get('/ping', (_req: Request, res: Response) => {
-    return res.send('pong 🏓')
-  })
-
-  app.listen(port, () => {
-    return console.log(`Server is listening on ${port}`)
-  })
