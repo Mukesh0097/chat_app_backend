@@ -11,10 +11,10 @@
     "dotenv": "^16.4.7"
   },
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "build":"tsc",
-    "dev": "nodemon --exec ts-node src/main.ts"
-  },
+  "build": "tsc",
+  "start": "node dist/main.js",
+  "dev": "ts-node src/main.ts"
+},
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.8",
