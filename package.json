@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "ts-node src/main.ts",
-    "build":"npx tsc",
+    "build":"tsc",
     "dev": "nodemon --exec ts-node src/main.ts"
   },
   "devDependencies": {
